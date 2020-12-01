@@ -1,0 +1,375 @@
+.box {
+    position: relative;
+    background-color: rgb(231, 231, 231);
+
+    swiper {
+        width: 100%;
+        height: 420rpx;
+
+        image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .swiper_a {
+        background-color: #000;
+        color: #fff;
+        opacity: .6;
+        width: 85%;
+        position: absolute;
+        left: 8%;
+        top: 110rpx;
+        height: 50rpx;
+        font-size: 30rpx;
+        border-radius: 30rpx;
+
+        swiper-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            view {
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 30rpx;
+            }
+        }
+    }
+
+    .van-search {
+        position: absolute;
+        width: 90%;
+        opacity: .8;
+        left: 5%;
+        top: 10rpx;
+
+        .van-search__content {
+            border-radius: 30rpx;
+        }
+    }
+
+    .van-notice-bar {
+        .right {
+            color: #000;
+        }
+    }
+
+    .grid {
+        .grid_item {
+            width: 20%;
+            height: 100%;
+        }
+    }
+
+    // 秒杀
+    .miao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+        align-items: center;
+
+        >view {
+            width: 95%;
+            background-color: rgb(231, 231, 231);
+            display: flex;
+            border-radius: 20rpx;
+            box-sizing: border-box;
+            padding: 20rpx 0;
+            margin-bottom: 10rpx;
+
+            .img {
+
+                image {
+                    width: 240rpx;
+                    height: 240rpx;
+                    border-radius: 20rpx;
+                }
+
+                margin-right: 20rpx;
+            }
+
+            .title {
+                font-size: 30rpx;
+                color: rgb(41, 41, 41);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 10rpx 20rpx;
+
+                .time {
+                    background-color: rgb(194, 34, 34);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    font-size: 30rpx;
+                    border-radius: 20rpx;
+                    padding-left: 30rpx;
+
+                    .van-count-down {
+                        color: #fff;
+                    }
+                }
+
+                .pic {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .price {
+                        font-size: 32rpx;
+                        font-weight: 700;
+                        color: #f00;
+                    }
+
+                    .oldPric {
+                        font-size: 26rpx;
+                        color: #a3a3a3;
+                        text-decoration: line-through;
+                    }
+
+                    .van-button {
+                        width: 160rpx;
+                    }
+                }
+            }
+        }
+    }
+
+    // 直播
+    .zhiBo {
+        width: 100%;
+
+        image {
+            width: 100%;
+            height: 400rpx;
+            vertical-align: top;
+        }
+    }
+
+    // 分割线
+    .divider {
+        height: 100rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+    }
+
+    // 列表
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+
+        >view {
+            width: 46%;
+            // box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20rpx;
+            background-color: #fff;
+            margin: 10rpx 2%;
+
+            image {
+                width: 100%;
+                height: 360rpx;
+                border-radius: 20rpx;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                vertical-align: top;
+            }
+
+            .title {
+                font-size: 30rpx;
+                color: #000;
+                padding-left: 20rpx;
+                height: 70rpx;
+                line-height: 50rpx;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .pic {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 20rpx 10rpx;
+
+                .price {
+                    font-size: 28rpx;
+                    color: #f00;
+                }
+
+                .oldPric {
+                    font-size: 26rpx;
+                    color: #a3a3a3;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+
+    // 砍价
+    .kan {
+        background-color: #fff;
+
+        .h {
+            font-size: 34rpx;
+            font-weight: 700;
+            padding-left: 20rpx;
+            height: 60rpx;
+            line-height: 60rpx;
+            margin-bottom: 10rpx;
+            border-bottom: 1rpx solid rgb(175, 175, 175);
+        }
+
+        .jia {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(231, 231, 231);
+
+            >view {
+                background-color: #fff;
+                box-sizing: border-box;
+                padding: 20rpx 20rpx;
+                margin: 10rpx 0;
+                width: 100%;
+
+                .van-button {
+                    float: right;
+                    width: 160rpx;
+                    margin-right: 20rpx;
+                }
+            }
+
+            >view>view {
+                display: flex;
+                background-color: #fff;
+
+                .img {
+
+                    image {
+                        width: 240rpx;
+                        height: 240rpx;
+                        border-radius: 20rpx;
+                    }
+
+                    margin-right: 20rpx;
+                }
+
+                .title {
+                    width: 100%;
+                    font-size: 30rpx;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: rgb(41, 41, 41);
+                }
+
+                .content {
+                    width: 480rpx;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding: 10rpx 20rpx;
+
+                    .time {
+                        background-color: #fafafa;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        font-size: 30rpx;
+                        border-radius: 20rpx;
+                        padding-left: 30rpx;
+
+                        .van-count-down {
+                            color: #fff;
+                        }
+                    }
+
+                    .pic {
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+
+                        .price {
+                            font-size: 32rpx;
+                            font-weight: 700;
+                            color: #f00;
+                        }
+
+                        .oldPric {
+                            font-size: 26rpx;
+                            color: #a3a3a3;
+                            text-decoration: line-through;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    // 拼团
+    .pin {
+        .tuan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >view {
+                width: 95%;
+                background-color: #fff;
+                margin: 20rpx 0;
+                padding: 0 0 10rpx 0;
+
+                image {
+                    width: 100%;
+                    vertical-align: top;
+                }
+
+                .text {
+                    padding-left: 30rpx;
+                    font-size: 36rpx;
+                    color: #000;
+                }
+
+                .pic {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-sizing: border-box;
+                    padding: 0 20rpx;
+
+                    .price {
+                        font-size: 32rpx;
+                        font-weight: 700;
+                        color: #f00;
+                    }
+
+                    .oldPric {
+                        font-size: 26rpx;
+                        color: #a3a3a3;
+                        text-decoration: line-through;
+                    }
+
+                    .van-button {
+                        width: 160rpx;
+                    }
+                }
+            }
+        }
+    }
+}

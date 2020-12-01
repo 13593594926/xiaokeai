@@ -1,0 +1,167 @@
+.box {
+    display: flex;
+    flex-direction: column;
+
+    swiper {
+        width: 100%;
+        height: 800rpx;
+        bottom: 20rpx;
+
+        image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .content {
+        padding: 20rpx;
+
+        .title {
+            font-size: 40rpx;
+            line-height: 50rpx;
+            color: #000;
+            padding: 10rpx 0;
+        }
+
+        .fen {
+            font-size: 30rpx;
+            color: #F00;
+        }
+
+        .pic {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .pic1 {
+                font-size: 46rpx;
+                color: #f00;
+            }
+
+            .pic2 {
+                font-size: 36rpx;
+                color: rgb(143, 143, 143);
+            }
+
+            .pic3 {
+                font-size: 30rpx;
+                color: #ccc;
+            }
+
+            .icon {
+                font-size: 80rpx;
+
+                .van-icon {
+
+                    margin-left: 20rpx;
+                }
+            }
+        }
+
+        .but {
+            font-size: 30rpx;
+            line-height: 30rpx;
+            padding: 10rpx 0;
+
+        }
+    }
+
+    .jie {
+        margin-bottom: 120rpx;
+
+        .txt {
+            padding: 30rpx;
+            font-size: 40rpx;
+        }
+
+        image {
+            width: 100%;
+
+            vertical-align: top;
+        }
+    }
+
+    .goods {
+        width: 100%;
+
+        .van-button {
+            width: 25%;
+        }
+
+        .van-goods-action-button {
+            .van-button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.prpup {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 50rpx;
+    padding-bottom: 100rpx;
+
+    .stepper {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 10rpx;
+        margin-top: 30rpx;
+    }
+
+    .van-button {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.van-popup {
+
+
+    .prop {
+        >view {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10rpx 20rpx;
+            border-bottom: 1px solid rgb(143, 143, 143);
+
+            >view {
+                >text {
+                    font-size: 40rpx;
+                }
+
+
+            }
+
+            .fen {
+                display: flex;
+                flex-wrap: wrap;
+                >view {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80rpx;
+                    height: 40rpx;
+                    border: 1rpx solid rgb(143, 143, 143);
+                    color: #000;
+                    font-size: 26rpx;
+                    border-radius: 10rpx;
+                    margin: 0 10rpx;
+                    padding: 10rpx;
+                }
+
+                .disable {
+                    border: 1rpx solid #ddd;
+                    color: #ddd;
+                }
+
+                .active {
+                    border: 1rpx solid #f00;
+                    color: #f00;
+                } 
+            }
+        }
+    }
+}

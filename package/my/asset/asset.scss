@@ -1,0 +1,59 @@
+.box {
+    .head {
+        display: flex;
+        flex-direction: column;
+        background-color: #E85654;
+        height: 360rpx;
+
+        >view {
+            display: flex;
+            justify-content: space-around;
+            height: 180rpx;
+            align-items: center;
+
+            >view {
+                font-size: 30rpx;
+                color: #fff;
+                text-align: center;
+                margin-top: 30rpx;
+
+                view {
+                    margin-bottom: 20rpx;
+
+                }
+            }
+        }
+
+        .btn {
+            justify-content: flex-end;
+            margin-right: 30rpx;
+
+            >view {
+                width: 120rpx;
+                height: 60rpx;
+                border-radius: 14rpx;
+                border: 2rpx solid #fff;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+
+                view {
+                    margin: 0;
+                }
+
+                .van-button {
+                    width: 50rpx;
+                    border-radius: 14rpx;
+                }
+            }
+        }
+    }
+
+  .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300rpx;
+      color: rgb(102, 102, 102);
+  }
+}

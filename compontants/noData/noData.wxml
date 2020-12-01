@@ -1,0 +1,10 @@
+<view class="box">
+    <view>
+        <image src="../../images/wu.png"></image>
+    </view>
+    <!-- <text>暂无数据</text> -->
+    <view>
+        <button type='warn' bindtap="jump">去逛逛</button>
+    </view>
+</view>
+;

@@ -1,0 +1,76 @@
+<view class="box">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{list.pics}}" wx:key="id">
+            <swiper-item>
+                <image class="" src="{{item.pic}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="content">
+        <view class="title">
+            <text>{{list.basicInfo.name}}</text>
+        </view>
+        <view class="fen">
+            <text>分享有赏，好友下单后可得 5元现金奖励</text>
+        </view>
+        <view class="pic">
+            <view class="pic1">
+                <text>￥{{list.basicInfo.minPrice}}</text>
+            </view>
+            <!-- <view class="pic2">
+                <text>￥{{list.basicInfo.originalPrice}}</text>
+            </view> -->
+            <view class="pic3">
+                <text>{{list.basicInfo.numberSells||0}}人已买</text>
+            </view>
+            <view class="icon" hover-class="none" hover-stop-propagation="false">
+                <van-icon name="share-o" color="#1989fa" />
+                <van-icon name="cluster-o" color="#1989fa" />
+            </view>
+        </view>
+        <view class="but">
+            <text>微信圈子 好物圈</text>
+        </view>
+    </view>
+    <view class="jie" hover-class="none" hover-stop-propagation="false">
+        <view class="txt">
+            <texr>商品介绍</texr>
+        </view>
+        <view>
+            <image src="{{item.pic}}" mode="widthFix" wx:for="{{list.pics}}" wx:key="id"></image>
+        </view>
+    </view>
+    <view class="goods">
+        <van-goods-action>
+            <van-goods-action-icon icon="chat-o" text="客服" />
+            <van-goods-action-icon icon="cart-o" text="购物车" info="{{num}}"  bind:click="goShop" />
+            <van-goods-action-icon bind:click="favAdd" icon="like-o" text="收藏" wx:if="{{list.basicInfo.numberFav==0}}" />
+            <van-goods-action-icon bind:click="favDel" icon="like" text="收藏" wx:else />
+            <van-goods-action-button text="加入购物车" type="warning" bind:click="showPopup" />
+            <van-goods-action-button text="立即购买" />
+        </van-goods-action>
+    </view>
+</view>
+<van-popup show="{{ show }}" closeable round position="bottom" bind:close="onClose">
+    <view class="prpup">
+        <van-card price="{{list.basicInfo.minPrice}}" title="{{list.basicInfo.name}}" thumb="{{ list.basicInfo.pic }}" />
+        <view class="prop">
+            <view wx:for="{{properties}}" wx:key="id">
+                <view>
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="fen" >
+                    <view bindtap="add" data-i="{{index}}"  class="{{sku[index].optionValueId==it.id?'active':''}}" data-id="{{it.id}}" wx:for="{{item.childsCurGoods}}" wx:for-item="it" wx:for-index="i" wx:key="id">
+                        <text>{{it.name}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="stepper">
+                <text>购买数量：</text>
+                <van-stepper value="{{ value }}" bind:change="onChange" />
+        </view>
+        <van-button type="danger" block bind:click="addShop">加入购物车</van-button>
+    </view>
+</van-popup>

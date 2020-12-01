@@ -1,0 +1,54 @@
+<view class="box" hover-class="none" hover-stop-propagation="false">
+    <view class="head" hover-class="none" hover-stop-propagation="false">
+        <view >
+            <view >
+                <view>
+                    <text>可用余额(元)</text>
+                </view>
+                <view>
+                    <text>0.00</text>
+                </view>
+            </view>
+            <view >
+                <view>
+                    <text>冻结金额(元)</text>
+                </view>
+                <view>
+                    <text>0.00</text>
+                </view>
+            </view>
+            <view >
+                <view>
+                    <text>累计消费(元)</text>
+                </view>
+                <view>
+                    <text>0.00</text>
+                </view>
+            </view>
+        </view>
+        <view class="btn" hover-class="none" hover-stop-propagation="false">
+            <view >
+                <van-button color="#E85654" hairline type="primary" size="small">提现</van-button>
+            </view>
+        </view>
+    </view>
+    <view class="content" hover-class="none" hover-stop-propagation="false">
+        <van-tabs type="card" title-style="#000" active="{{ active }}" bind:change="onChange">
+            <van-tab title="资金明细">
+                <view class="title">
+                    <text>暂无资金明细~</text>
+                </view>
+            </van-tab>
+            <van-tab title="提现记录">
+                <view class="title">
+                    <text>暂无提现记录~</text>
+                </view>
+            </van-tab>
+            <van-tab title="押金记录">
+                <view class="title">
+                    <text>暂无押金记录~</text>
+                </view>
+            </van-tab>
+        </van-tabs>
+    </view>
+</view>

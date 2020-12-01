@@ -1,0 +1,50 @@
+<!-- pages/seachList/seachList.wxml -->
+<view class="seachBox">
+  <view class="pos">
+    <view class="sea">
+      <view class="sea_sea">
+        <van-search value="{{value}}" shape="round" right-icon="search" bind:search="seach" use-left-icon-slot="{{true}}" value="{{ value }}" placeholder="请输入搜索关键词" background="none" />
+      </view>
+      <view class="sea_icon" bind:tap="qiehuan">
+        <van-icon name="apps-o" wx:if="{{isShow}}" />
+        <van-icon name="qr" wx:if="{{!isShow}}" />
+        <!-- qr -->
+      </view>
+    </view>
+    <!-- 导航栏 -->
+    <view class="nav">
+      <text bindtap="sortZ">综合</text>
+      <text bindtap="sortX">新品</text>
+      <text bindtap="sortL">销量</text>
+      <text bindtap="sortJ">价格</text>
+    </view>
+  </view>
+  <view class="hezi" wx:if="{{isShow}}">
+    <view class="miaosha" wx:for="{{list}}" wx:key="index">
+      <view class="img1" bind:click="goDetail" data-id="{{item.id}}">
+        <image src="{{item.pic}}" />
+      </view>
+      <view class="ms_right">
+        <view class="zi" bind:click="goDetail" data-id="{{item.id}}">{{item.name}}</view>
+        <text class="xian">￥{{item.minPrice}}</text>
+        <text class="shouchu">已售出{{item.numberSells}}件</text>
+        <van-icon name="shopping-cart-o" color="red" size="50rpx" bind:click="addShop" data-id="{{item.id}}" />
+      </view>
+    </view>
+  </view>
+  <!-- 点击换样式 -->
+  <view class="listBox" wx:if="{{!isShow}}">
+    <view class="lr" wx:for="{{list}}" wx:key="index">
+      <image src="{{item.pic}}" />
+      <view class="lr_te">{{item.name}}</view>
+      <view class="lr_te1">
+        <view>￥{{item.minPrice}}</view>
+        <view class="lr_te2">{{item.numberOrders}}人已购买{{item.numberSells}}件</view>
+      </view>
+      <van-icon name="shopping-cart-o" color="red" size="50rpx" bind:click="addShop" data-id="{{item.id}}" />
+    </view>
+  </view>
+  <view wx:if="{{list.length==0}}">
+    <noData></noData>
+  </view>
+</view>

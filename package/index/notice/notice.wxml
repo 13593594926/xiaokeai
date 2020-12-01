@@ -1,0 +1,16 @@
+<view class="title">
+    <view class="header">
+        <text  selectable="false" space="false" decode="false">商城新开张，优惠多多，戳 戳 戳 我看详情。</text>
+    </view>
+    <view>
+        <view class="head">尊敬的客户：</view>
+        <view class="h">商城新开张，快来砸单哦！</view>
+        <view class="h">1、单件包邮（秒杀除外）</view>
+        <view class="h">2、每天发布6件秒杀商品</view>
+        <view class="h">3、满减活动：</view>
+        <view class="a">A: 满100元返10元券；</view>
+        <view class="a">B: 满200元返25元券；</view>
+        <view class="a">C: 满300元返40元券；</view>
+        <view class="f">消费累计满500元，返80元券哦！</view>
+    </view>
+</view>

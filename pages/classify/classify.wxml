@@ -1,0 +1,6 @@
+<view class="box">
+    <van-sticky>
+        <van-search value="{{ value }}" background="" bind:search="search" placeholder="请输入搜索关键词"></van-search>
+    </van-sticky>
+    <side arr="{{arr}}" activeKey="{{activeKey}}" list="{{list}}" bind:dian="onChange"></side>
+</view>

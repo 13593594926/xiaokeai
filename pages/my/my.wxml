@@ -1,0 +1,137 @@
+<!-- index.wxml -->
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    获取头像昵称
+  </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view class="title">
+      <text class="id">用户ID：{{uId}}</text>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </block>
+</view>
+<!-- 九宫格 -->
+<view class="jiugongge">
+  <van-grid column-num="4" border="{{ true }}">
+    <van-grid-item use-slot bind:click="jumpAss">
+      <text>0.00</text>
+      <text>余额</text>
+    </van-grid-item>
+    <van-grid-item use-slot bind:click="jumpAss">
+      <text>0.00</text>
+      <text>冻结</text>
+    </van-grid-item>
+    <van-grid-item use-slot bind:click="jumpB">
+      <text>0</text>
+      <text>积分</text>
+    </van-grid-item>
+    <van-grid-item use-slot bind:click="jumpC">
+      <text>0</text>
+      <text>成长值</text>
+    </van-grid-item>
+  </van-grid>
+</view>
+<!-- 我的订单 -->
+<view>
+  <!-- 我的订单 -->
+  <view class="dingdan" bindtap="jumpO">
+    <text>我的订单</text>
+    <van-icon name="arrow" />
+  </view>
+  <!-- 待付款 -->
+  <view class="fukuan">
+    <van-grid column-num="5" border="{{false}}">
+      <van-grid-item  bind:click="jumpO1" icon="pending-payment" text="待付款"  />
+      <van-grid-item  bind:click="jumpO2" icon="paid" text="待发货"  />
+      <van-grid-item  bind:click="jumpO3" icon="logistics" text="待收货"  />
+      <van-grid-item  bind:click="jumpO4" icon="flower-o" text="待评价"  />
+      <van-grid-item  bind:click="jumpO5" icon="after-sale" text="售后"  />
+    </van-grid>
+  </view>
+  <!-- 优惠买单 -->
+  <view class="dingdan">
+    <text>优惠买单</text>
+    <van-icon name="arrow"/>
+  </view>
+  <!-- 资金明细 -->
+  <view class="dingdan">
+    <text>资金明细</text>
+    <van-icon name="arrow" />
+  </view>
+</view>
+<!-- 成为分销商 -->
+<view class=" xiaoshang dingdan">
+  <text>成为分销商</text>
+  <van-icon name="arrow" />
+</view>
+<view>
+  <view class="dingdan">
+    <text>申请发票</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan">
+    <text>发票记录</text>
+    <van-icon name="arrow" />
+  </view>
+</view>
+<!-- 收货地址 -->
+<view class="bod">
+  <view class="dingdan">
+    <text>收货地址</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan">
+    <text>领劵中心</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan" bindtap="jumpCollect">
+    <text>我的收藏</text>
+    <van-icon name="arrow" />
+  </view>
+</view>
+<!-- 每日签到 -->
+<view class="bod">
+  <view class="dingdan">
+    <text>每日签到</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan">
+    <text>积分券兑换积分</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan">
+    <text>积分兑换成长值</text>
+    <van-icon name="arrow" />
+  </view>
+</view>
+<!-- 绑定手机 -->
+<view class="bod">
+  <view class="dingdan">
+    <text>绑定手机</text>
+    <van-button type="primary">立即绑定</van-button>
+  </view>
+</view>
+<!-- 关于我们 -->
+<view class="bod">
+  <view class="dingdan small">
+    <text>关于我们</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan small">
+    <text>帮助中心</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan small">
+    <text>清除缓存</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan small" bindtap="quit">
+    <text>退出登录</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class="dingdan small">
+    <text>当前版本</text>
+    <text>9.3.1</text>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view class="box" wx:if="{{list.length!=0}}">
+    <view class="item" wx:for="{{list}}" wx:key="id">
+        <image src="{{item.pic}}"></image>
+        <view>
+            <text>{{item.goodsName}}</text>
+        </view>
+        <van-icon name="delete" color="#f00" bind:click="del" data-id="{{item.id}}" data-goodsId="{{item.goodsId}}" />
+    </view>
+</view>
+<view wx:else>
+    <van-divider contentPosition="center">暂无收藏</van-divider>
+</view>

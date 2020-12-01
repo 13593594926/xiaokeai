@@ -1,0 +1,34 @@
+.box {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.box .ban {
+  width: 100%;
+  height: 100%;
+}
+
+.box .banner {
+  width: 100%;
+  height: 100%;
+}
+
+.box .box_ban {
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.btnn {
+  position: absolute;
+  bottom: 90rpx;
+  left: 45%;
+  background-color: sandybrown;
+  color: #fff;
+}

@@ -1,0 +1,56 @@
+<view class="box">
+    <view class="">
+        <view class="side">
+            <view wx:for="{{arr}}" wx:key="id" class="{{activeKey==item.id?'active':''}}" data-id="{{item.id}}" bindtap="aaa">
+                <text>{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="rig">
+        <view class="right">
+            <view wx:for="{{list}}" wx:key="id" >
+                <view data-id="{{item.id}}" bindtap="shopDetail">
+                    <image src="{{item.pic}}"></image>
+                </view>
+                <view class="bot">
+                    <view class="title">
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="pic">
+                        <view class="price">
+                            <text>￥{{item.minPrice}}</text>
+                        </view>
+                        <view class="">
+                            <van-icon name="plus" color="#F00" wx:if="{{item.propertyIds}}"  data-id="{{item.id}}" bindtap="add" />
+                            <van-icon name="shopping-cart-o" color="#f00" wx:else bind:click="addShop" data-id="{{item.id}}" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<van-popup show="{{ show }}" closeable round position="bottom" bind:close="onClose">
+    <view class="prpup">
+        <van-card price="{{obj.basicInfo.minPrice}}" title="{{obj.basicInfo.name}}" thumb="{{ obj.basicInfo.pic }}" />
+        <view class="prop">
+            <view wx:for="{{properties}}" wx:key="id">
+                <view>
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="fen" >
+                    <view bindtap="sku" data-i="{{index}}"  class="{{sku[index].optionValueId==it.id?'active':''}}" data-id="{{it.id}}" wx:for="{{item.childsCurGoods}}" wx:for-item="it" wx:for-index="i" wx:key="id">
+                        <text>{{it.name}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="stepper">
+                <text>购买数量：</text>
+                <van-stepper value="{{ value }}" bind:change="onChange" />
+        </view>
+        <van-button type="danger" block bind:click="addSkuShop">加入购物车</van-button>
+    </view>
+</van-popup>

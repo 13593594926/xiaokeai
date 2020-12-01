@@ -1,0 +1,40 @@
+<view wx:if="{{!list.items.length}}">
+    <noData></noData>
+</view>
+<view class="box" wx:else>
+    <view>
+        <view class="item" wx:for="{{list.items}}" wx:key="key">
+            <view class="img">
+                <image src="{{item.pic}}"></image>
+            </view>
+            <view class="content">
+                <view class="title">
+                    <view class="txt">
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="icon">
+                        <van-icon name="delete" color="#f00" bind:click="del" data-id="{{item.key}}" />
+                    </view>
+                </view>
+                <view class="color" wx:for="{{item.sku}}" wx:for-item="i" wx:key="id">
+                    <text class="" selectable="false" space="false" decode="false">{{i.optionName}}：{{i.optionValueName}}</text>
+                </view>
+                <view class="pri">
+                    <view class="price">
+                        <text>￥{{item.price}}</text>
+                    </view>
+                    <view class="num">
+                        <van-stepper bind:blur="plus" bind:plus="plus" bind:minus="plus" bind:change="change" data-id="{{item.key}}" value="{{ item.number }}" integer />
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <van-submit-bar button-text="去结算" bind:submit="onSubmit">
+            <view name="-" class="submit" hover-class="none" hover-stop-propagation="false">
+                <text wx:if="{{list.price}}">合计：￥{{list.price}}+{{list.score}} 积分</text>
+            </view>
+        </van-submit-bar>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+.box{
+    .head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #E85654;
+        height: 200rpx;
+        view{
+            font-size: 30rpx;
+            color: #fff;
+            margin-bottom: 20rpx;
+        }
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300rpx;
+        color: rgb(187, 187, 187);
+    }
+}

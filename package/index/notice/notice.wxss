@@ -1,0 +1,32 @@
+.title .header {
+  font-size: 32rpx;
+  font-weight: 500;
+  border-bottom: 2rpx solid #adadad;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+
+.title > view {
+  font-size: 30rpx;
+}
+
+.title > view > view {
+  margin-top: 20rpx;
+}
+
+.title > view .head {
+  padding-left: 20rpx;
+}
+
+.title > view .h {
+  padding-left: 60rpx;
+}
+
+.title > view .a {
+  padding-left: 80rpx;
+}
+
+.title > view .f {
+  padding-left: 100rpx;
+}

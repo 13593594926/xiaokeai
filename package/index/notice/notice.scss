@@ -1,0 +1,35 @@
+.title {
+    .header {
+        font-size: 32rpx;
+        font-weight: 500;
+        border-bottom: 2rpx solid rgb(173, 173, 173);
+        height: 80rpx;
+        line-height: 80rpx;
+        padding-left: 20rpx;
+    }
+
+    >view {
+        font-size: 30rpx;
+
+        >view {
+            margin-top: 20rpx;
+        }
+
+        .head {
+            padding-left: 20rpx;
+        }
+
+        .h {
+            padding-left: 60rpx;
+        }
+
+
+        .a {
+            padding-left: 80rpx;
+        }
+
+        .f {
+            padding-left: 100rpx;
+        }
+    }
+}

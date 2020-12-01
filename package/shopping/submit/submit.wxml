@@ -1,0 +1,11 @@
+<view class="box">
+    <view class="list">
+        <van-card wx:for="{{list.items}}" num="{{item.number}}" wx:key="id" price="{{item.price}}" title="{{item.name}}" thumb="{{ item.pic }}" />
+    </view>
+    <view class="pei"></view>
+    <van-submit-bar button-text="提交订单" bind:submit="onSubmit">
+        <view name="-" class="submit">
+            <text wx:if="{{list.price}}">合计：￥{{list.price}}+{{list.score}} 积分</text>
+        </view>
+    </van-submit-bar>
+</view>

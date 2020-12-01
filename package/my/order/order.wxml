@@ -1,0 +1,39 @@
+<view id="orderList">
+    <!-- 选项卡区域 -->
+    <view class="tab">
+        <view bindtap="change" id="{{index}}" wx:for="{{tab}}" class="li {{active==index?'red':''}}" wx:key="index">
+            <text>{{item.title}}</text>
+        </view>
+    </view>
+    <!-- 订单内容区域 -->
+    <view class="content">
+        <view class="box" wx:if="{{list.length!=0}}">
+            <view wx:for="{{list}}" wx:key="index" class="item">
+                <!-- 头部 -->
+                <view class="title">
+                    <text class="orderNumber">{{item.orderNumber}}</text>
+                    <text class="status">{{item.statusStr}} ></text>
+                </view>
+                <!-- 图片 -->
+                <view class="image">
+                    <image src="{{goodsMap[item.id][0].pic}}" />
+                    <view class="price">
+                        <text>共{{item.goodsNumber}}件商品 合计:￥{{item.amount}}</text>
+                    </view>
+                </view>
+                <!-- 时间 -->
+                <view class="time">
+                    <text>{{item.dateAdd}}</text>
+                </view>
+                <!-- 按钮 -->
+                <view wx:if="{{item.status==0}}" class="btn">
+                    <button class="fukuan">马上付款</button>
+                    <button class="cancel" bindtap="del" data-id="{{item.id}}">取消订单</button>
+                </view>
+            </view>
+        </view>
+        <view wx:else>
+            <van-empty description="暂无订单" />
+        </view>
+    </view>
+</view>

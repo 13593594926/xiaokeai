@@ -1,0 +1,56 @@
+.box .head {
+  display: flex;
+  flex-direction: column;
+  background-color: #E85654;
+  height: 360rpx;
+}
+
+.box .head > view {
+  display: flex;
+  justify-content: space-around;
+  height: 180rpx;
+  align-items: center;
+}
+
+.box .head > view > view {
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.box .head > view > view view {
+  margin-bottom: 20rpx;
+}
+
+.box .head .btn {
+  justify-content: flex-end;
+  margin-right: 30rpx;
+}
+
+.box .head .btn > view {
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 14rpx;
+  border: 2rpx solid #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box .head .btn > view view {
+  margin: 0;
+}
+
+.box .head .btn > view .van-button {
+  width: 50rpx;
+  border-radius: 14rpx;
+}
+
+.box .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300rpx;
+  color: #666666;
+}
